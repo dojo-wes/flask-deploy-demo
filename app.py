@@ -20,7 +20,7 @@ class User(db.Model):
     updated_at = db.Column(db.DateTime, server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
-        return "<User username: %s>" self.username
+        return "<User username: {}>".format(self.username)
 
 class Tweet(db.Model):
     id = db.Column(db.Integer, primary_key=True)
